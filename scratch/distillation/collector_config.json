@@ -1,0 +1,30 @@
+{
+  "collector_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "teacher_checkpoint_path": "c:/Users/Saheer Hawa/OneDrive/Desktop/NectoFamily-master/NectoFamily-master/nexto/nexto-model.pt",
+  "teacher_expected_sha256": "bf5343b5eeacac6bf7cdb75dac4a5c14ba0f94d820eae75f00a211b6119d69fa",
+  "teacher_parameters": 444032,
+  "student_features_expected": 13,
+  "student_parameters_expected": 26181,
+  "sequence_length": 64,
+  "tick_rate_hz": 15,
+  "filter_unrepresentable_actions": true,
+  "split_ratios": {
+    "train": 0.70,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "random_seed": 42,
+  "output_dir": "scratch/distillation/output",
+  "class_weights": {
+    "0": 2.0,
+    "1": 1.0,
+    "2": 3.0,
+    "3": 2.5
+  },
+  "safety_guards": {
+    "allow_student_checkpoint_overwrite": false,
+    "allow_production_pin_modification": false,
+    "allow_unrepresentable_training": false
+  }
+}

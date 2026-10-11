@@ -1,0 +1,20 @@
+{
+  "dataset_version": "GoalAwareExpert_Simulation_V1",
+  "total_episodes": 50,
+  "total_frames": 12000,
+  "split_method": "chronological_80_20_seqlen_64",
+  "seed": 42,
+  "architecture": "13D / encoder64 / GRU64 / mode4+steer",
+  "objective": "CrossEntropyLoss + 4.0 * SmoothL1Loss",
+  "checkpoint_selection": "Candidate B (lowest steer MAE, 0 turnaround stalls, cosine similarity 0.96424)",
+  "training_command": "python experiments/runner.py",
+  "validation_results": {
+    "validation_loss": 0.5098,
+    "mode_accuracy": 0.9215,
+    "steer_mae": 0.2348,
+    "baseline_cosine_similarity": 0.96424,
+    "turnaround_stalls": 0,
+    "aerial_ground_dodges": 0
+  },
+  "limitations": "Trained on goal-aware kinematic simulation demonstrations with Ackermann steering curves and arcing clearance pathing. Resolves turnaround deadlocks and aerial misjudgments; global goal positions remain unobserved under the 13D contract."
+}

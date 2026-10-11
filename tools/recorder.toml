@@ -1,0 +1,15 @@
+#:schema https://rlbot.org/schemas/agent.json
+[settings]
+name = "Live Recorder Teacher"
+agent_id = "rlbot_community/python_example"
+root_dir = ".."
+run_command = ".venv\\Scripts\\python.exe tools\\record_live_match.py"
+loadout_file = "loadout.toml"
+logo_file = ""
+hivemind = false
+
+[details]
+description = "Plays as the official reference teacher while recording synchronized 60Hz 13D observations and actions."
+developer = "Participant"
+language = "Python"
+tags = ["1v1"]
